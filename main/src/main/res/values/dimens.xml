@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="rdo1">0dp</dimen>
+    <dimen name="rdo2">100dp</dimen>
+    <dimen name="rdo3">200dp</dimen>
+    <dimen name="rdo4">300dp</dimen>
+    <dimen name="rdo5">400dp</dimen>
+    <dimen name="choose_service_fragment_size">300dp</dimen>
+    <integer name="grid_columns_services">5</integer>
+    <integer name="image_dimensions_services">80</integer>
+    <integer name="grid_columns_assets">5</integer>
+    <integer name="image_dimensions_assets">120</integer>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="bbuton_rounded_corner_radius">5dp</dimen>
+
+    <dimen name="bthumbnail_rounded_corner_radius">3dp</dimen>
+
+    <dimen name="padding_micro">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+</resources>

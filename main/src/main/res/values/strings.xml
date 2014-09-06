@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Merchants</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="store_management">店铺管理</string>
+    <string name="data_report">数据报表</string>
+    <string name="order_management">订单管理</string>
+    <string name="menu_management">菜单管理</string>
+    <string name="about_us">关于我们</string>
+
+    <string name="shop_business">店铺营业</string>
+    <string name="business_time">营业时间</string>
+    <string name="shop_notices">店铺公告</string>
+    <string name="send_price">起送价</string>
+    <string name="send_food_price">送餐费</string>
+    <string name="send_time">送达时间</string>
+    <string name="message_business">短信接单</string>
+    <string name="client_business">客户端接单</string>
+    <string name="log_out">退出登录</string>
+</resources>

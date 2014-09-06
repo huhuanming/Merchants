@@ -1,0 +1,27 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView
+        android:id="@+id/menu_management_group_kids_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#747675"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        />
+    <TextView
+        android:id="@+id/menu_management_group_kids_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#747675"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        />
+</RelativeLayout>

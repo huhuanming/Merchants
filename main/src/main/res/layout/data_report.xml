@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Progresswheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/menu_framelayout"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.merchants.main.View.Progress.ProgressWheel
+            android:id="@+id/pw_spinner"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            Progresswheel:text="235"
+            Progresswheel:textColor="#222"
+            Progresswheel:textSize="14sp"
+            Progresswheel:rimColor="#330097D6"
+            Progresswheel:barLength="60dp"
+            Progresswheel:barColor="#0097D6"
+            Progresswheel:barWidth="15dp"
+            Progresswheel:rimWidth="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日订单数"
+            android:layout_centerInParent="true"
+            android:paddingTop="35dp"
+            />
+    </RelativeLayout>
+</LinearLayout>
