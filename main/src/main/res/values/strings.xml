@@ -9,6 +9,9 @@
     <string name="order_management">订单管理</string>
     <string name="menu_management">菜单管理</string>
     <string name="about_us">关于我们</string>
+    
+    <string name="new_classification">新建分类</string>
+    <string name="new_food">新的菜品</string>
 
     <string name="shop_business">店铺营业</string>
     <string name="business_time">营业时间</string>
@@ -19,4 +22,12 @@
     <string name="message_business">短信接单</string>
     <string name="client_business">客户端接单</string>
     <string name="log_out">退出登录</string>
+
+    <string name="welcomeback">欢迎回来</string>
+    <string name="phonenumber">手机号</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
 </resources>

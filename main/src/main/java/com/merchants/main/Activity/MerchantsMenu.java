@@ -1,81 +1,110 @@
 package com.merchants.main.Activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.MotionEvent;
+import android.support.v4.widget.DrawerLayout;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.merchants.main.R;
-import com.merchants.main.ResideMenu.ResideMenu;
-import com.merchants.main.ResideMenu.ResideMenuItem;
 
 
-public class MerchantsMenu extends FragmentActivity implements View.OnClickListener{
+public class MerchantsMenu extends FragmentActivity{
 
-    public ResideMenu resideMenu;
-    private ResideMenuItem store_management;
-    private ResideMenuItem data_report;
-    private ResideMenuItem order_management;
-    private ResideMenuItem menu_management;
-    private ResideMenuItem about_us;
+    final String[] menuEntries = {"店铺管理","数据报表","订单管理","菜单管理","关于我们"};
+    final String[] fragments = {
+            "com.merchants.main.Activity.StoreManagementFragment",
+            "com.merchants.main.Activity.DataReportFragment",
+            "com.merchants.main.Activity.OrderManagementFragment",
+            "com.merchants.main.Activity.MenuManagementFragment",
+            "com.merchants.main.Activity.AboutUsFragment"
+    };
 
+    private ActionBarDrawerToggle drawerToggle;
+    private View headview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.merchants_main);
-        // attach to current activity;
-        resideMenu = new ResideMenu(this);
-        resideMenu.setBackground(R.drawable.menu_background);
-        resideMenu.attachToActivity(this);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActionBar().getThemedContext(), android.R.layout.simple_list_item_1, menuEntries);
 
-        store_management = new ResideMenuItem(this, R.color.transparent,R.string.store_management );
-        data_report = new ResideMenuItem(this, R.color.transparent,R.string.data_report );
-        order_management = new ResideMenuItem(this, R.color.transparent,R.string.order_management );
-        menu_management = new ResideMenuItem(this, R.color.transparent,R.string.menu_management );
-        about_us = new ResideMenuItem(this, R.color.transparent,R.string.about_us );
+        final DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        final ListView navList = (ListView) findViewById(R.id.drawer);
+        headview = LayoutInflater.from(this).inflate(R.layout.menu_listview_head, null);
+        navList.addHeaderView(headview,null,false);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
 
-        resideMenu.addMenuItem(store_management);
-        resideMenu.addMenuItem(data_report);
-        resideMenu.addMenuItem(order_management);
-        resideMenu.addMenuItem(menu_management);
-        resideMenu.addMenuItem(about_us);
+        drawerToggle = new ActionBarDrawerToggle(
+                this,
+                drawer,
+                R.drawable.ic_drawer,
+                R.string.drawer_open,
+                R.string.drawer_close
+        ) {
 
-        store_management.setOnClickListener(this);
-        data_report.setOnClickListener(this);
-        order_management.setOnClickListener(this);
-        menu_management.setOnClickListener(this);
-        about_us.setOnClickListener(this);
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
 
-        changeFragment(new StoreManagementFragment(resideMenu));
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+
+        drawer.setDrawerListener(drawerToggle);
+
+        navList.setAdapter(adapter);
+        navList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int pos,long id){
+                drawer.setDrawerListener( new DrawerLayout.SimpleDrawerListener(){
+                    @Override
+                    public void onDrawerClosed(View drawerView){
+                        super.onDrawerClosed(drawerView);
+                        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+                        tx.replace(R.id.main, Fragment.instantiate(MerchantsMenu.this, fragments[pos-1]));
+                        getActionBar().setTitle(menuEntries[pos-1]);
+                        tx.commit();
+                    }
+                });
+                drawer.closeDrawer(navList);
+            }
+        });
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+        tx.replace(R.id.main,Fragment.instantiate(MerchantsMenu.this, fragments[0]));
+        tx.commit();
+
     }
-    private void changeFragment(Fragment targetFragment){
-        resideMenu.clearIgnoredViewList();
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.menu_framelayout, targetFragment, "fragment")
-                .setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .commit();
-    }
+
     @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        return resideMenu.onInterceptTouchEvent(ev) || super.dispatchTouchEvent(ev);
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerToggle.syncState();
     }
 
-
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        drawerToggle.onConfigurationChanged(newConfig);
+    }
 
     @Override
-    public void onClick(View view) {
-        if(view == store_management)
-            changeFragment(new StoreManagementFragment(resideMenu));
-        else if(view == data_report)
-            changeFragment(new DataReportFragment());
-        else if(view == order_management)
-            changeFragment(new OrderManagementFragment());
-        else if(view == menu_management)
-            changeFragment(new MenuManagementFragment(resideMenu));
-        else if(view == about_us)
-            changeFragment(new AboutUsFragment());
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -15,4 +15,11 @@
         <item name="android:displayOptions">showTitle</item> //只显示title 不显示logo
         -->
     </style>
+    <style name="DrawerMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">#ff343434</item>
+        <item name="android:textColor">#ff060606</item>
+    </style>
 </resources>
