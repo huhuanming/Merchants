@@ -15,6 +15,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.merchants.main.R;
+import com.merchants.main.View.Button.BootstrapEditText;
 
 public class AlertDialog {
 	private Context context;
@@ -22,6 +23,9 @@ public class AlertDialog {
 	private LinearLayout lLayout_bg;
 	private TextView txt_title;
 	private TextView txt_msg;
+    private TextView txt_msg_two;
+    private BootstrapEditText txt_edit_one;
+    private BootstrapEditText txt_edit_two;
 	private Button btn_neg;
 	private Button btn_pos;
 	private ImageView img_line;
@@ -30,6 +34,7 @@ public class AlertDialog {
 	private boolean showMsg = false;
 	private boolean showPosBtn = false;
 	private boolean showNegBtn = false;
+    private boolean showMsgEditTwo = false;
 
 	public AlertDialog(Context context) {
 		this.context = context;
@@ -39,16 +44,20 @@ public class AlertDialog {
 	}
 
 	public AlertDialog builder() {
-		// ��ȡDialog����
 		View view = LayoutInflater.from(context).inflate(
 				R.layout.view_alertdialog, null);
 
-		// ��ȡ�Զ���Dialog�����еĿؼ�
 		lLayout_bg = (LinearLayout) view.findViewById(R.id.lLayout_bg);
 		txt_title = (TextView) view.findViewById(R.id.txt_title);
 		txt_title.setVisibility(View.GONE);
 		txt_msg = (TextView) view.findViewById(R.id.txt_msg);
 		txt_msg.setVisibility(View.GONE);
+        txt_msg_two = (TextView)view.findViewById(R.id.txt_msg_two);
+        txt_msg_two.setVisibility(View.GONE);
+        txt_edit_one = (BootstrapEditText)view.findViewById(R.id.txt_edit_one);
+        txt_edit_one.setVisibility(View.GONE);
+        txt_edit_two = (BootstrapEditText)view.findViewById(R.id.txt_edit_two);
+        txt_edit_two.setVisibility(View.GONE);
 		btn_neg = (Button) view.findViewById(R.id.btn_neg);
 		btn_neg.setVisibility(View.GONE);
 		btn_pos = (Button) view.findViewById(R.id.btn_pos);
@@ -56,11 +65,9 @@ public class AlertDialog {
 		img_line = (ImageView) view.findViewById(R.id.img_line);
 		img_line.setVisibility(View.GONE);
 
-		// ����Dialog���ֺͲ���
 		dialog = new Dialog(context, R.style.AlertDialogStyle);
 		dialog.setContentView(view);
 
-		// ����dialog������С
 		lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (display
 				.getWidth() * 0.85), LayoutParams.WRAP_CONTENT));
 
@@ -70,22 +77,49 @@ public class AlertDialog {
 	public AlertDialog setTitle(String title) {
 		showTitle = true;
 		if ("".equals(title)) {
-			txt_title.setText("����");
+			txt_title.setText("提示");
 		} else {
 			txt_title.setText(title);
 		}
 		return this;
 	}
 
-	public AlertDialog setMsg(String msg) {
+	public AlertDialog setMsgOne(String msg) {
 		showMsg = true;
 		if ("".equals(msg)) {
-			txt_msg.setText("����");
+			txt_msg.setText("提示");
 		} else {
 			txt_msg.setText(msg);
 		}
 		return this;
 	}
+    public AlertDialog setMsgTwo(String msg) {
+        showMsgEditTwo = true;
+        if ("".equals(msg)) {
+            txt_msg_two.setText("提示");
+        } else {
+            txt_msg_two.setText(msg);
+        }
+        return this;
+    }
+    public AlertDialog setHintOne(String msg) {
+        showMsg = true;
+        if ("".equals(msg)) {
+            txt_edit_one.setHint("");
+        } else {
+            txt_edit_one.setHint(msg);
+        }
+        return this;
+    }
+    public AlertDialog setHintTwo(String msg) {
+        showMsgEditTwo = true;
+        if ("".equals(msg)) {
+            txt_edit_two.setHint("");
+        } else {
+            txt_edit_two.setHint(msg);
+        }
+        return this;
+    }
 
 	public AlertDialog setCancelable(boolean cancel) {
 		dialog.setCancelable(cancel);
@@ -96,7 +130,7 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showPosBtn = true;
 		if ("".equals(text)) {
-			btn_pos.setText("ȷ��");
+			btn_pos.setText("确定");
 		} else {
 			btn_pos.setText(text);
 		}
@@ -114,7 +148,7 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showNegBtn = true;
 		if ("".equals(text)) {
-			btn_neg.setText("ȡ��");
+			btn_neg.setText("取消");
 		} else {
 			btn_neg.setText(text);
 		}
@@ -130,7 +164,7 @@ public class AlertDialog {
 
 	private void setLayout() {
 		if (!showTitle && !showMsg) {
-			txt_title.setText("��ʾ");
+			txt_title.setText("提示");
 			txt_title.setVisibility(View.VISIBLE);
 		}
 
@@ -140,10 +174,19 @@ public class AlertDialog {
 
 		if (showMsg) {
 			txt_msg.setVisibility(View.VISIBLE);
+            txt_edit_one.setVisibility(View.VISIBLE);
 		}
 
+        if(showMsg && showMsgEditTwo)
+        {
+            txt_msg.setVisibility(View.VISIBLE);
+            txt_edit_one.setVisibility(View.VISIBLE);
+            txt_msg_two.setVisibility(View.VISIBLE);
+            txt_edit_two.setVisibility(View.VISIBLE);
+        }
+
 		if (!showPosBtn && !showNegBtn) {
-			btn_pos.setText("ȷ��");
+			btn_pos.setText("确定");
 			btn_pos.setVisibility(View.VISIBLE);
 			btn_pos.setBackgroundResource(R.drawable.alertdialog_single_selector);
 			btn_pos.setOnClickListener(new OnClickListener() {

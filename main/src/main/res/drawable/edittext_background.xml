@@ -3,7 +3,7 @@
     
     <item android:state_focused="true"><shape>
         <solid android:color="@color/white" />
-        <stroke android:width="2dp" android:color="@color/bbutton_primary" />
+        <stroke android:width="2dp" android:color="@color/alertdialog_line" />
     </shape></item>   
 <item android:state_enabled="false"><shape>
 	    <solid android:color="@color/bbutton_edittext_disabled" />

@@ -71,7 +71,15 @@ public class MenuManagementFragment extends Fragment{
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long l) {
+                new AlertDialog(getActivity()).builder()
+                        .setMsgOne("菜品分类").setHintOne("输入菜品分类")
+                        .setMsgTwo("单价").setHintTwo("单价(元)")
+                        .setNegativeButton("确定", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
 
+                            }
+                        }).show();
                 return false;
             }
         });
@@ -79,7 +87,7 @@ public class MenuManagementFragment extends Fragment{
             @Override
             public boolean onGroupClick(ExpandableListView expandableListView, View view, int groupPosition, long l) {
                 new AlertDialog(getActivity()).builder()
-                        .setMsg("你现在无法接收到新消息提醒。请到系统-设置-通知中开启消息提醒")
+                        .setMsgOne("菜品名称").setHintOne("输入菜品名称")
                         .setNegativeButton("确定", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
