@@ -9,12 +9,15 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.merchants.main.Model.MenuManagementGroupData;
 import com.merchants.main.Model.MenuManagementKidsData;
 import com.merchants.main.R;
+import com.merchants.main.View.Dialog.AlertDialog;
 import com.merchants.main.View.Listview.PinnedHeaderExpandableListView;
 
 import java.util.ArrayList;
@@ -54,13 +57,38 @@ public class MenuManagementFragment extends Fragment{
 
                 childTemp.add(menuManagementKidsData);
             }
-            MenuManagementKidsData menuManagementKidsData = new MenuManagementKidsData();
-            childTemp.add(menuManagementKidsData);
             kids_list.add(childTemp);
         }
+        ArrayList<MenuManagementKidsData> childTemp;
+        childTemp = new ArrayList<MenuManagementKidsData>();
+//        MenuManagementKidsData menuManagementKidsData = new MenuManagementKidsData();
+//        childTemp.add(menuManagementKidsData);
+        kids_list.add(childTemp);
 
         adapter = new MenuManagementExpandableListAdapter(getActivity());
         expandableListView.setAdapter(adapter);
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long l) {
+
+                return false;
+            }
+        });
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int groupPosition, long l) {
+                new AlertDialog(getActivity()).builder()
+                        .setMsg("你现在无法接收到新消息提醒。请到系统-设置-通知中开启消息提醒")
+                        .setNegativeButton("确定", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        }).show();
+                return false;
+            }
+        });
         return parentView;
     }
     /***
@@ -91,22 +119,6 @@ public class MenuManagementFragment extends Fragment{
         }
 
         @Override
-        public int getChildType(int groupPosition, int childPosition) {
-            if(kids_list.get(groupPosition).size()-1 == childPosition)
-                return LAST_ITEM;
-            else
-                return NOT_LAST_ITEM;
-        }
-
-        @Override
-        public int getGroupType(int groupPosition) {
-            if(group_list.size()-1 == groupPosition)
-                return LAST_ITEM;
-            else
-                return NOT_LAST_ITEM;
-        }
-
-        @Override
         public int getGroupTypeCount() {
             return 2;
         }
@@ -128,7 +140,18 @@ public class MenuManagementFragment extends Fragment{
 
             return group_list.get(groupPosition);
         }
-
+        public int getItemViewType(int groupPosition) {
+            if(group_list.size()-1 == groupPosition)
+                return LAST_ITEM;
+            else
+                return NOT_LAST_ITEM;
+        }
+        public int getChildItemViewType(int groupPosition, int childPosition) {
+            if(kids_list.get(groupPosition).size()-1 == childPosition)
+                return LAST_ITEM;
+            else
+                return NOT_LAST_ITEM;
+        }
         @Override
         public Object getChild(int groupPosition, int childPosition) {
             return kids_list.get(groupPosition).get(childPosition);
@@ -155,24 +178,24 @@ public class MenuManagementFragment extends Fragment{
                                  View convertView, ViewGroup parent) {
             GroupHolder groupHolder = null;
             ViewHolder viewHolder = null;
-            int type = getGroupType(groupPosition);
+            int type = getItemViewType(groupPosition);
             switch(type){
                 case LAST_ITEM:
-                    if (convertView == null) {
+//                    if (convertView == null) {
                         viewHolder = new ViewHolder();
                         convertView = inflater.inflate(R.layout.menu_management_lastitem, null);
                         viewHolder.textView = (TextView) convertView
                                 .findViewById(R.id.menu_management_lastitem_text);
 
                         convertView.setTag(viewHolder);
-                    } else {
-                        viewHolder = (ViewHolder) convertView.getTag();
-                    }
+//                    } else {
+//                        viewHolder = (ViewHolder) convertView.getTag();
+//                    }
                     viewHolder.textView.setText(R.string.new_classification);
 
                     break;
                 case NOT_LAST_ITEM:
-                    if (convertView == null) {
+//                    if (convertView == null) {
                         groupHolder = new GroupHolder();
                         convertView = inflater.inflate(R.layout.menu_management_group, null);
                         groupHolder.group_name = (TextView) convertView
@@ -180,9 +203,9 @@ public class MenuManagementFragment extends Fragment{
                         groupHolder.imageView = (ImageView) convertView
                                 .findViewById(R.id.menu_management_group_img);
                         convertView.setTag(groupHolder);
-                    } else {
-                        groupHolder = (GroupHolder) convertView.getTag();
-                    }
+//                    } else {
+//                        groupHolder = (GroupHolder) convertView.getTag();
+//                    }
 
                     groupHolder.group_name.setText(group_list.get(groupPosition).getGroup_name());
 
@@ -201,28 +224,31 @@ public class MenuManagementFragment extends Fragment{
                                  boolean isLastChild, View convertView, ViewGroup parent) {
             ChildHolder childHolder = null;
             ViewHolder viewHolder = null;
-            int type = getChildType(groupPosition,childPosition);
+            int type = getChildItemViewType(groupPosition,childPosition);
             switch (type)
             {
                 case LAST_ITEM:
-                    if (convertView == null) {
+//                    if (convertView == null) {
                         viewHolder = new ViewHolder();
                         convertView = inflater.inflate(R.layout.menu_management_lastitem, null);
-
+                        viewHolder.menu_management_lastitem_layout = (RelativeLayout)convertView
+                                .findViewById(R.id.menu_management_lastitem_layout);
                         viewHolder.textView = (TextView) convertView
                                 .findViewById(R.id.menu_management_lastitem_text);
 
 
                         convertView.setTag(viewHolder);
-                    } else {
-                        viewHolder = (ViewHolder) convertView.getTag();
-                    }
-
-                    viewHolder.textView.setText(R.string.new_food);
+//                    } else {
+//                        viewHolder = (ViewHolder) convertView.getTag();
+//                    }
+                    if(groupPosition == group_list.size()-1)
+                        viewHolder.menu_management_lastitem_layout.setVisibility(View.GONE);
+                    else
+                        viewHolder.textView.setText(R.string.new_food);
 
                     break;
                 case NOT_LAST_ITEM:
-                    if (convertView == null) {
+//                    if (convertView == null) {
                         childHolder = new ChildHolder();
                         convertView = inflater.inflate(R.layout.menu_management_group_kids, null);
 
@@ -232,9 +258,9 @@ public class MenuManagementFragment extends Fragment{
                                 .findViewById(R.id.menu_management_group_kids_price);
 
                         convertView.setTag(childHolder);
-                    } else {
-                        childHolder = (ChildHolder) convertView.getTag();
-                    }
+//                    } else {
+//                        childHolder = (ChildHolder) convertView.getTag();
+//                    }
 
                     childHolder.food_name.setText(kids_list.get(groupPosition).get(childPosition).getFood_name());
                     childHolder.food_price.setText(kids_list.get(groupPosition).get(childPosition).getFood_price());
@@ -258,6 +284,7 @@ public class MenuManagementFragment extends Fragment{
     }
     class ViewHolder{
        TextView textView;
+       RelativeLayout menu_management_lastitem_layout;
     }
 
     class ChildHolder {

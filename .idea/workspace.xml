@@ -19,67 +19,25 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="ssss" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.merchants.main" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad9ededc-e221-4372-973f-fc9af053c3b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/ic_drawer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/lkm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Button/BootstrapButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Button/BootstrapEditText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Button/FontAwesome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/LoginBackData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MainApiManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsLogin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_danger.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_danger_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_default_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_info.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_info_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_inverse.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_inverse_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_primary.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_primary_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_success.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_success_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_warning.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/bbuton_warning_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/bootstrap_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/bootstrap_button_fill.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_danger.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_rounded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_rounded_danger.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_rounded_success.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_rounded_warning.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_success.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/edittext_background_warning.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/login_merchants.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_listview_head.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ResideMenu/ResideMenu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ResideMenu/ResideMenuItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ResideMenu/TouchDisableView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/menu_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/title_bar_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/title_bar_menu_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/drawable/titlebar_menu_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/layout/merchants_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/layout/residemenu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/main/res/layout/residemenu_item.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/main/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/alert_bg.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/alert_btn_left_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/alert_btn_right_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/alert_btn_single_pressed.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable-hdpi/trans_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/AlertDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/alertdialog_left_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/alertdialog_right_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/drawable/alertdialog_single_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/view_alertdialog.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MenuManagementFragment.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MenuManagementFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/StoreManagementFragment.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/StoreManagementFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_group.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_group.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_group_kids.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_group_kids.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/store_management.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/store_management.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/main/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/main/src/main/res/values/color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/main/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -104,36 +62,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MenuManagementFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MenuManagementFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MenuManagementFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.948718" vertical-offset="676" max-vertical-offset="5472">
-              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3392#3393#0" expanded="true" />
-                <element signature="e#3424#3425#0" expanded="true" />
-                <element signature="e#3492#3493#0" expanded="true" />
-                <element signature="e#3548#3549#0" expanded="true" />
-                <element signature="e#4093#4094#0" expanded="true" />
-                <element signature="e#4125#4126#0" expanded="true" />
-                <element signature="e#4200#4201#0" expanded="true" />
-                <element signature="e#4248#4249#0" expanded="true" />
-                <element signature="e#5992#6019#0" expanded="true" />
-                <element signature="e#8179#8196#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="6066">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_management_lastitem.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="MerchantsMenu.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="414">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.58189654" vertical-offset="720" max-vertical-offset="1782">
+              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlertDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/AlertDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2592" max-vertical-offset="3348">
+              <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/main/res/values/color.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1224">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,7 +105,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="702">
+            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="702">
               <caret line="12" column="36" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
@@ -1215,21 +1178,24 @@
         <option value="$PROJECT_DIR$/main/src/main/res/layout/store_management.xml" />
         <option value="$PROJECT_DIR$/main/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/StoreManagementFragment.java" />
-        <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml" />
         <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_listview_head.xml" />
-        <option value="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" />
-        <option value="$PROJECT_DIR$/main/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/main/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml" />
         <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_management_group_kids.xml" />
+        <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml" />
+        <option value="$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml" />
+        <option value="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/AlertDialog.java" />
+        <option value="$PROJECT_DIR$/main/src/main/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/main/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MenuManagementFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="26" />
-    <option name="width" value="1366" />
-    <option name="height" value="674" />
+    <option name="x" value="34" />
+    <option name="y" value="44" />
+    <option name="width" value="1279" />
+    <option name="height" value="667" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1257,6 +1223,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -1266,171 +1233,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Merchants" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1445,14 +1249,15 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="JZZTR8BI6LQSMZKZ" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/下载/Android---Navigation-Drawer-example-master" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/main/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/main/src/main/res/drawable-hdpi" />
+      <recent name="$PROJECT_DIR$/main/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/main/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog" />
       <recent name="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/UploadImage" />
-      <recent name="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model" />
-      <recent name="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.main">
@@ -1485,19 +1290,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1523,6 +1315,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1635,17 +1440,20 @@
       <created>1409971146851</created>
       <updated>1409971146851</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="框架变更+菜单管理页面">
+      <created>1410030139514</created>
+      <updated>1410030139514</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1366" height="674" extended-state="6" />
+    <frame x="34" y="44" width="1279" height="667" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17173253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963505" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1655,18 +1463,19 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.77737224" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.77615064" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1724924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3211679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3170334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32008368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17127496" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1689,19 +1498,13 @@
     </option>
     <MESSAGE value="上传主要内容" />
     <MESSAGE value="上传主要的内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传主要的内容" />
+    <MESSAGE value="框架变更+菜单管理页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="框架变更+菜单管理页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2772">
-          <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/LoginBackData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="360">
@@ -1846,13 +1649,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/bootstrap_button.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.25316456" vertical-offset="354" max-vertical-offset="828">
           <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Button/BootstrapButton.java">
@@ -1863,13 +1666,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/login_merchants.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.033334" vertical-offset="1781" max-vertical-offset="2268">
           <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Button/BootstrapEditText.java">
@@ -1890,7 +1693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7427466" vertical-offset="120" max-vertical-offset="648">
           <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1936,21 +1738,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326886" vertical-offset="476" max-vertical-offset="1098">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55705994" vertical-offset="252" max-vertical-offset="792">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
-            <element signature="e#1209#1227#0" expanded="true" />
-            <element signature="e#1550#1576#0" expanded="true" />
+            <element signature="e#1209#1227#0" expanded="false" />
+            <element signature="e#1550#1576#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1959,95 +1753,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55705994" vertical-offset="0" max-vertical-offset="517">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_listview_head.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4556962" vertical-offset="0" max-vertical-offset="504">
           <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45665962" vertical-offset="270" max-vertical-offset="1836">
-          <caret line="41" column="51" selection-start-line="40" selection-start-column="8" selection-end-line="41" selection-end-column="51" />
-          <folding>
-            <element signature="e#1352#1360#0" expanded="true" />
-            <element signature="e#2002#2022#0" expanded="true" />
-            <element signature="e#2040#2061#0" expanded="true" />
-            <element signature="e#2679#3490#0" expanded="true" />
-            <element signature="e#2876#3419#0" expanded="true" />
-            <element signature="e#3400#3401#0" expanded="true" />
-            <element signature="e#3479#3480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/store_management.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/store_management.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11088296" vertical-offset="0" max-vertical-offset="7326">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/StoreManagementFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41779497" vertical-offset="0" max-vertical-offset="517">
           <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22176592" vertical-offset="0" max-vertical-offset="487">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_group.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35064936" vertical-offset="0" max-vertical-offset="630">
           <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/merchants_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/merchants_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58957654" vertical-offset="215" max-vertical-offset="522">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61702126" vertical-offset="41" max-vertical-offset="558">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/res/values/strings.xml">
@@ -2058,45 +1811,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml">
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_group_kids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5564682" vertical-offset="125" max-vertical-offset="612">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Listview/PinnedHeaderExpandableListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="414">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2220" max-vertical-offset="4284">
+          <caret line="180" column="54" selection-start-line="180" selection-start-column="54" selection-end-line="180" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="450">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="68" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_lastitem.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="432">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="687" max-vertical-offset="1224">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/menu_management_group_kids.xml">
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="738">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/drawable/alertdialog_left_selector.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24884793" vertical-offset="0" max-vertical-offset="434">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/res/layout/view_alertdialog.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1212871" vertical-offset="465" max-vertical-offset="1368">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/AlertDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5564682" vertical-offset="125" max-vertical-offset="612">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1893" max-vertical-offset="3150">
+          <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MenuManagementFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.948718" vertical-offset="676" max-vertical-offset="5472">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#3424#3425#0" expanded="true" />
-            <element signature="e#3492#3493#0" expanded="true" />
-            <element signature="e#3548#3549#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#4125#4126#0" expanded="true" />
-            <element signature="e#4200#4201#0" expanded="true" />
-            <element signature="e#4248#4249#0" expanded="true" />
-            <element signature="e#5992#6019#0" expanded="true" />
-            <element signature="e#8179#8196#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="6066">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58189654" vertical-offset="720" max-vertical-offset="1782">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
