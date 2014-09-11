@@ -247,51 +247,56 @@
 
 <h4 id="method-i-restaurants-label-Response+Status+Code">Response Status Code<span><a href="#method-i-restaurants-label-Response+Status+Code">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
 
-<pre>201</pre>
+<pre>200</pre>
 
 <h4 id="method-i-restaurants-label-Response+Body">Response Body<span><a href="#method-i-restaurants-label-Response+Body">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
 
-<h6 id="method-i-restaurants-label-response_status%3A">response_status:<span><a href="#method-i-restaurants-label-response_status%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+<h6 id="method-i-restaurants-label-type_name%3A">type_name:<span><a href="#method-i-restaurants-label-type_name%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
 
-<pre>&quot;successed to create a restaurant&quot;(字符串)</pre>
+<pre>菜品种类名</pre>
 
-<h4 id="method-i-restaurants-label-Error+Status+Code">Error Status Code<span><a href="#method-i-restaurants-label-Error+Status+Code">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
+<h6 id="method-i-restaurants-label-foods%3A">foods:<span><a href="#method-i-restaurants-label-foods%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<h6 id="method-i-restaurants-label-food_name%3A">food_name:<span><a href="#method-i-restaurants-label-food_name%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<pre>菜名</pre>
+
+<h6 id="method-i-restaurants-label-shop_price%3A">shop_price:<span><a href="#method-i-restaurants-label-shop_price%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<pre>销售价格</pre>
 
 <h4 id="method-i-restaurants-label-Response+Body+Example%3A">Response Body Example:<span><a href="#method-i-restaurants-label-Response+Body+Example%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h4>
 
-<pre>[</pre>
-
-<p>{ “type_name”:“菜品二”, “foods”:</p>
-
 <pre>[
-        {
-                &quot;food_name&quot;:&quot;翔啊&quot;,
-                &quot;shop_price&quot;:&quot;3.0&quot;
-        },
-        {
-                &quot;food_name&quot;:&quot;鐧借彍&quot;,
-                &quot;shop_price&quot;:&quot;2.0&quot;
-        }
-]</pre>
-
-<p>},</p>
-
-<pre>{
+   {
+        &quot;type_name&quot;:&quot;菜品二&quot;,
+        &quot;foods&quot;:
+        [
+                {
+                        &quot;food_name&quot;:&quot;翔啊&quot;,
+                        &quot;shop_price&quot;:&quot;3.0&quot;
+                },
+                {
+                        &quot;food_name&quot;:&quot;鐧借彍&quot;,
+                        &quot;shop_price&quot;:&quot;2.0&quot;
+                }
+        ]
+         },
+ {
         &quot;type_name&quot;:&quot;翔类&quot;,
         &quot;foods&quot;:
-                [
-                        {
-                                &quot;food_name&quot;:&quot;好菜&quot;,
-                                &quot;shop_price&quot;:&quot;2.0&quot;
-                        },
-                        {
-                                &quot;food_name&quot;:&quot;花菜&quot;,
-                                &quot;shop_price&quot;:&quot;1.0&quot;
-                        }
-                ]
-}</pre>
-
-<p>]</p>
+        [
+                {
+                        &quot;food_name&quot;:&quot;好菜&quot;,
+                        &quot;shop_price&quot;:&quot;2.0&quot;
+                },
+                {
+                        &quot;food_name&quot;:&quot;花菜&quot;,
+                        &quot;shop_price&quot;:&quot;1.0&quot;
+                }
+        ]
+ }
+]</pre>
           
           
 
