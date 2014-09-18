@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -52,6 +52,7 @@
                 android:background="#EBEBEB"
                 />
             <RelativeLayout
+                android:id="@+id/store_management_business_time"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
@@ -60,7 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -69,8 +70,8 @@
                     />
                 <ImageView
                     android:id="@+id/business_time_more"
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -81,7 +82,7 @@
                     android:id="@+id/business_time_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_toLeftOf="@id/business_time_more"
@@ -110,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -118,8 +119,8 @@
                     android:text="@string/shop_notices"
                     />
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -147,7 +148,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -156,8 +157,8 @@
                     />
                 <ImageView
                     android:id="@+id/send_price_more"
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -168,7 +169,7 @@
                     android:id="@+id/send_price_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_toLeftOf="@id/send_price_more"
@@ -191,7 +192,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -200,8 +201,8 @@
                     />
                 <ImageView
                     android:id="@+id/send_food_price_more"
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -212,7 +213,7 @@
                     android:id="@+id/send_food_price_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_toLeftOf="@id/send_food_price_more"
@@ -235,7 +236,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -244,8 +245,8 @@
                     />
                 <ImageView
                     android:id="@+id/send_time_more"
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -256,7 +257,7 @@
                     android:id="@+id/send_time_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_toLeftOf="@id/send_time_more"
@@ -284,7 +285,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -314,7 +315,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -322,8 +323,8 @@
                     android:text="1520000000"
                     />
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/more"
                     android:layout_alignParentRight="true"
@@ -346,7 +347,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_marginLeft="30dp"
                     android:textColor="#747675"
                     android:layout_centerVertical="true"
@@ -375,14 +376,14 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
-
+                android:id="@+id/store_login_exit"
                 android:clickable="true"
                 android:background="@drawable/background_style"
                 >
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="55dp"
-                    android:textSize="23sp"
+                    android:textSize="17sp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_centerInParent="true"

@@ -2,6 +2,7 @@ package com.merchants.main.Utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 /**
  * Created by chen on 14-8-20.
@@ -22,5 +23,11 @@ public class ShareUtils {
         SharedPreferences Shared = context.getSharedPreferences("usermessage", 0);
         SharedPreferences.Editor editor = Shared.edit();
         editor.clear().commit();
+    }
+
+    public static String getId(Context context) {
+        SharedPreferences TokenShared = context.getSharedPreferences("usermessage", 0);
+        Log.e("ssss",TokenShared.getString("id", ""));
+        return TokenShared.getString("id", "");
     }
 }

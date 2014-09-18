@@ -16,5 +16,7 @@ public class MainApiManager {
     public static abstract interface FialedInterface{
         public abstract void onSuccess(Object object);
         public abstract void onFailth(int code);
+        public abstract void onOtherFaith();
+        public abstract void onNetworkError();
     }
 }

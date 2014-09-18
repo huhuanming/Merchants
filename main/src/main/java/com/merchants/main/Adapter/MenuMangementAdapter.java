@@ -6,9 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.merchants.main.Model.MenuManagementGroupDatabase;
@@ -26,11 +23,10 @@ public class MenuMangementAdapter extends BaseAdapter{
     private HashMap<String, Object> map;
     private List<MenuManagementGroupDatabase> group_list;
     private int mRightWidth = 0;
-    public MenuMangementAdapter(Context context,List<MenuManagementGroupDatabase> group_list,int rightWidth)
+    public MenuMangementAdapter(Context context,List<MenuManagementGroupDatabase> group_list)
     {
         this.context = context;
         this.group_list = group_list;
-        mRightWidth = rightWidth;
     }
 
 
@@ -70,29 +66,14 @@ public class MenuMangementAdapter extends BaseAdapter{
                     .findViewById(R.id.menu_management_group_name);
             holder.imageView = (ImageView) convertView
                     .findViewById(R.id.menu_management_group_img);
-
-            holder.item_right = (RelativeLayout)convertView.findViewById(R.id.item_right);
             convertView.setTag(holder);
         }
         else
         {
             holder = (GroupHolder) convertView.getTag();
         }
-//        LinearLayout.LayoutParams lp1 = new LayoutParams(
-//                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-//        holder.item_left.setLayoutParams(lp1);
-        LinearLayout.LayoutParams lp2 = new LayoutParams(mRightWidth,
-                LayoutParams.MATCH_PARENT);
-        holder.item_right.setLayoutParams(lp2);
         holder.group_name.setText(group_list.get(position).type_name);
-        holder.item_right.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mListener != null) {
-                    mListener.onRightItemClick(v, position);
-                }
-            }
-        });
+
         return convertView;
     }
 
@@ -100,19 +81,7 @@ public class MenuMangementAdapter extends BaseAdapter{
         TextView group_name;
         ImageView imageView;
 
-        RelativeLayout item_right;
-    }
-    /**
-     * 单击事件监听器
-     */
-    private onRightItemClickListener mListener = null;
-
-    public void setOnRightItemClickListener(onRightItemClickListener listener){
-        mListener = listener;
-    }
-
-    public interface onRightItemClickListener {
-        void onRightItemClick(View v, int position);
+//        RelativeLayout item_right;
     }
     }
 

@@ -2,7 +2,10 @@ package com.merchants.main.Activity;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,9 +17,11 @@ import com.merchants.main.Adapter.MenuManagementNewFoodAdapter;
 import com.merchants.main.Model.MenuManagementGroupDatabase;
 import com.merchants.main.Model.MenuManagementKidsDatabase;
 import com.merchants.main.R;
-import com.merchants.main.Utils.ToastUtils;
 import com.merchants.main.View.Dialog.AlertDialog;
-import com.merchants.main.View.Listview.SwipeListView;
+import com.merchants.main.View.Listview.SwipeMenuListView.SwipeMenu;
+import com.merchants.main.View.Listview.SwipeMenuListView.SwipeMenuCreator;
+import com.merchants.main.View.Listview.SwipeMenuListView.SwipeMenuItem;
+import com.merchants.main.View.Listview.SwipeMenuListView.SwipeMenuListView;
 
 import java.util.List;
 
@@ -30,7 +35,7 @@ public class MenuManagementNewFood extends Activity{
     private MenuManagementNewFoodAdapter adapter;
     private View headview;
     private long id = 0;
-    SwipeListView listview;
+    SwipeMenuListView listview;
     private int position;
 
 //    @InjectView(R.id.menu_management_newfood_listView)CustomListView listview;
@@ -46,7 +51,7 @@ public class MenuManagementNewFood extends Activity{
         id = getIntent().getExtras().getLong("id");
         initList();
 
-        listview = (SwipeListView)findViewById(R.id.menu_management_newfood_listView);
+        listview = (SwipeMenuListView)findViewById(R.id.menu_management_newfood_listView);
         headview = LayoutInflater.from(this).inflate(R.layout.menu_management_lastitem, null);
         TextView menu_management_lastitem_text = (TextView)headview.findViewById(R.id.menu_management_lastitem_text);
         menu_management_lastitem_text.setText(R.string.new_food);
@@ -78,13 +83,35 @@ public class MenuManagementNewFood extends Activity{
         });
 
         listview.addFooterView(headview,null,false);
-        adapter = new MenuManagementNewFoodAdapter(this,kids_list,listview.getRightViewWidth());
+        adapter = new MenuManagementNewFoodAdapter(this,kids_list);
         listview.setAdapter(adapter);
 
-        adapter.setOnRightItemClickListener(new MenuManagementNewFoodAdapter.onRightItemClickListener() {
+        // step 1. create a MenuCreator
+        SwipeMenuCreator creator = new SwipeMenuCreator() {
+
             @Override
-            public void onRightItemClick(View v, int position) {
-                ToastUtils.setToast(MenuManagementNewFood.this,""+kids_list.get(position).getId());
+            public void create(SwipeMenu menu) {
+                // create "delete" item
+                SwipeMenuItem deleteItem = new SwipeMenuItem(
+                        getApplicationContext());
+                // set item background
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
+                        0x3F, 0x25)));
+                // set item width
+                deleteItem.setWidth(dp2px(90));
+                // set a icon
+                deleteItem.setIcon(R.drawable.ic_delete);
+                // add to menu
+                menu.addMenuItem(deleteItem);
+            }
+        };
+        // set creator
+        listview.setMenuCreator(creator);
+
+        // step 2. listener item click event
+        listview.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public void onMenuItemClick(int position, SwipeMenu menu, int index) {
                 deleteData(kids_list.get(position).getId());
 
                 kids_list.remove(position);
@@ -92,6 +119,11 @@ public class MenuManagementNewFood extends Activity{
             }
         });
 
+    }
+
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+                getResources().getDisplayMetrics());
     }
 
     private void initList(){

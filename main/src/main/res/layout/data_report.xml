@@ -13,19 +13,21 @@
         android:layout_height="wrap_content">
 
         <com.merchants.main.View.Progress.ProgressWheel
-            android:id="@+id/pw_spinner"
+            android:layout_marginTop="20dp"
+            android:id="@+id/data_report_progress"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            Progresswheel:text="235"
+            Progresswheel:text="235份"
             Progresswheel:textColor="#222"
             Progresswheel:textSize="14sp"
-            Progresswheel:rimColor="#330097D6"
+            Progresswheel:rimColor="#e6e6e6"
             Progresswheel:barLength="60dp"
-            Progresswheel:barColor="#0097D6"
-            Progresswheel:barWidth="15dp"
-            Progresswheel:rimWidth="15dp" />
+            Progresswheel:barColor="#73C3E6"
+            Progresswheel:contourColor="#00000000"
+            Progresswheel:barWidth="23dp"
+            Progresswheel:rimWidth="23dp" />
 
         <TextView
             android:layout_width="wrap_content"

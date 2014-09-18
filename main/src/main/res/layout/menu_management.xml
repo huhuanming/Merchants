@@ -1,20 +1,24 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sp="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#F7F7F7"
     >
-    <com.merchants.main.View.Listview.PinnedHeaderExpandableListView
-        android:id="@+id/menu_management_expandablelistView"
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="@null"
-        android:childDivider="#EBEBEB"
-        android:childIndicatorLeft="0dp"
+        android:layout_height="match_parent" >
+    <com.merchants.main.View.Listview.SwipeMenuListView.SwipeMenuListView
+        android:id="@+id/menu_management_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
         android:divider="#EBEBEB"
         android:dividerHeight="1dp"
-        android:groupIndicator="@null"
-        android:scrollbarAlwaysDrawHorizontalTrack="false"
-        />
+        sp:right_width="100dp"
+        android:layout_marginBottom="3dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

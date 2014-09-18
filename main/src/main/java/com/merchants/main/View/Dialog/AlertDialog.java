@@ -24,8 +24,8 @@ public class AlertDialog {
 	private TextView txt_title;
 	private TextView txt_msg;
     private TextView txt_msg_two;
-    private BootstrapEditText txt_edit_one;
-    private BootstrapEditText txt_edit_two;
+    public BootstrapEditText txt_edit_one;
+    public BootstrapEditText txt_edit_two;
 	private Button btn_neg;
 	private Button btn_pos;
 	private ImageView img_line;
@@ -143,6 +143,12 @@ public class AlertDialog {
 		});
 		return this;
 	}
+    public String getMsgOne() {
+       return txt_edit_one.getText().toString().trim();
+    }
+    public String getMsgTwo() {
+        return txt_edit_two.getText().toString().trim();
+    }
 
 	public AlertDialog setNegativeButton(String text,
 			final OnClickListener listener) {

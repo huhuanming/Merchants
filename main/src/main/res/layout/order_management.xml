@@ -1,0 +1,21 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F7"
+    >
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/order_management_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#EBEBEB"
+            android:dividerHeight="10dp"
+            android:layout_marginBottom="5dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

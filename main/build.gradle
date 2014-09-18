@@ -27,4 +27,6 @@ dependencies {
     compile 'com.netflix.rxjava:rxjava-android:0.14.6'
     compile 'com.github.castorflex.smoothprogressbar:library:0.2.0'
     compile 'com.squareup.okhttp:okhttp:1.2.1'
+    compile 'de.hdodenhof:circleimageview:1.2.0'
+
 }

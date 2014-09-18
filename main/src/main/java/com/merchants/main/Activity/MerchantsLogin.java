@@ -17,6 +17,8 @@ import com.merchants.main.Utils.ShareUtils;
 import com.merchants.main.Utils.ToastUtils;
 import com.merchants.main.View.Button.BootstrapButton;
 
+import java.net.SocketTimeoutException;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -62,6 +64,7 @@ public class MerchantsLogin extends Activity {
                     editor = mshared.edit();
                     editor.putString("token", loginBackData.access_token.token);
                     editor.putString("key", loginBackData.access_token.key);
+                    editor.putString("id", loginBackData.restaurant.restaurant_id);
                     editor.commit();
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent();
@@ -69,7 +72,17 @@ public class MerchantsLogin extends Activity {
                     startActivity(intent);
                     MerchantsLogin.this.finish();
                 }
+                @Override
+                public void onOtherFaith() {
+                    ToastUtils.setToast(MerchantsLogin.this,"发生错误");
+                    progressBar.setVisibility(View.GONE);
+                }
 
+                @Override
+                public void onNetworkError() {
+                    ToastUtils.setToast(MerchantsLogin.this,"网络错误");
+                    progressBar.setVisibility(View.GONE);
+                }
                 @Override
                 public void onFailth(int code) {
                     progressBar.setVisibility(View.GONE);
@@ -138,10 +151,24 @@ public class MerchantsLogin extends Activity {
                 }, new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
+                        if(throwable.getClass().getName().toString().indexOf("RetrofitError") != -1) {
+                            retrofit.RetrofitError e = (retrofit.RetrofitError) throwable;
+                            if(e.isNetworkError())
+                            {
+                                if (e.getCause() instanceof SocketTimeoutException) {
+                                    fialedInterface.onFailth(e.getResponse().getStatus());
+                                } else {
+                                    fialedInterface.onNetworkError();
+                                }
 
-
-                        retrofit.RetrofitError e = (retrofit.RetrofitError)throwable;
-                        fialedInterface.onFailth(e.getResponse().getStatus());
+                            }
+                            else {
+                                fialedInterface.onFailth(e.getResponse().getStatus());
+                            }
+                        }
+                        else{
+                            fialedInterface.onOtherFaith();
+                        }
                     }
                 });
     }

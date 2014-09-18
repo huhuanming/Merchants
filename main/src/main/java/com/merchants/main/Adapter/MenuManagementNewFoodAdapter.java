@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.merchants.main.Model.MenuManagementKidsDatabase;
@@ -23,13 +21,11 @@ public class MenuManagementNewFoodAdapter extends BaseAdapter{
     private Context context;
     private HashMap<String, Object> map;
     private List<MenuManagementKidsDatabase> kids_list;
-    private int mRightWidth = 0;
 
-    public MenuManagementNewFoodAdapter(Context context,List<MenuManagementKidsDatabase> kids_list,int rightWidth)
+    public MenuManagementNewFoodAdapter(Context context,List<MenuManagementKidsDatabase> kids_list)
     {
         this.context = context;
         this.kids_list = kids_list;
-        mRightWidth = rightWidth;
     }
 
 
@@ -68,7 +64,6 @@ public class MenuManagementNewFoodAdapter extends BaseAdapter{
                     .findViewById(R.id.menu_management_group_kids_name);
             holder.food_price = (TextView) convertView
                     .findViewById(R.id.menu_management_group_kids_price);
-            holder.item_right = (RelativeLayout)convertView.findViewById(R.id.item_right);
             convertView.setTag(holder);
         } else {
             holder = (ChildHolder) convertView.getTag();
@@ -76,37 +71,11 @@ public class MenuManagementNewFoodAdapter extends BaseAdapter{
 
         holder.food_name.setText(kids_list.get(position).food_name);
         holder.food_price.setText(kids_list.get(position).shop_price+"元");
-        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(mRightWidth,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        holder.item_right.setLayoutParams(lp2);
-        holder.item_right.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mListener != null) {
-                    mListener.onRightItemClick(v, position);
-                }
-            }
-        });
         return convertView;
     }
 
     class ChildHolder {
         TextView food_name;
         TextView food_price;
-
-        RelativeLayout item_right;
-    }
-
-    /**
-     * 单击事件监听器
-     */
-    private onRightItemClickListener mListener = null;
-
-    public void setOnRightItemClickListener(onRightItemClickListener listener){
-        mListener = listener;
-    }
-
-    public interface onRightItemClickListener {
-        void onRightItemClick(View v, int position);
     }
 }
