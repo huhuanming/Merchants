@@ -73,7 +73,6 @@ public class DateUtils {
         return week;
     }
 
-    //获取年月日日期
     public static String getMonthTime(String utctime)
     {
         return formatDataTime(timestampToLocalDate(utctime));
@@ -81,6 +80,17 @@ public class DateUtils {
 
     public static String formatDataTime(Date date){
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd HH:mm");
+        return sdf.format(date);
+    }
+
+    //获取时间
+    public static String getTime(String utctime)
+    {
+        return formatTime(timestampToLocalDate(utctime));
+    }
+
+    public static String formatTime(Date date){
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         return sdf.format(date);
     }
 

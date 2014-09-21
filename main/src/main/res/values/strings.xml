@@ -36,6 +36,16 @@
 
     <string name="food_num">菜品总数:</string>
     <string name="order_details">订单详情</string>
+    <string name="order_need">订单需求:</string>
+    <string name="order_list">订单列表:</string>
+    <string name="order_note">订单备注:</string>
+    <string name="order_finish">确认订单</string>
+    <string name="pay_treasure">支付宝</string>
+    <string name="OK">确定</string>
+    <string name="time_to_send">及时送</string>
+    <string name="appointment_to_send">预约送</string>
+    <string name="provide_the_invoice">需要提供收银小票</string>
+    <string name="commercial_invoice">需要提供商用小票</string>
 
 
     <string name="done_label">Done</string>

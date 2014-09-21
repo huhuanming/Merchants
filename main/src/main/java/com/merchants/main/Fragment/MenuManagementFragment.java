@@ -6,7 +6,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +26,7 @@ import com.merchants.main.ApiManager.MerchantsApiManager;
 import com.merchants.main.Model.MenuManagementData;
 import com.merchants.main.Model.MenuManagementGroupDatabase;
 import com.merchants.main.Model.MenuManagementKidsDatabase;
-import com.merchants.main.Model.MenuUploadBackData;
+import com.merchants.main.Model.UploadBackData;
 import com.merchants.main.R;
 import com.merchants.main.Utils.JsonUtils;
 import com.merchants.main.Utils.ShareUtils;
@@ -305,10 +304,10 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
     {
 
         MerchantsApiManager.getMenuUploadBackData(token, jsonString).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<MenuUploadBackData>() {
+                .subscribe(new Action1<UploadBackData>() {
                     @Override
-                    public void call(MenuUploadBackData menuUploadBackData) {
-                        fialedInterface.onSuccess(menuUploadBackData);
+                    public void call(UploadBackData uploadBackData) {
+                        fialedInterface.onSuccess(uploadBackData);
                     }
                 }, new Action1<Throwable>() {
                     @Override
@@ -388,7 +387,6 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
 //        progressbar.setVisibility(View.VISIBLE);
         getDataFromDatabase();
         ToastUtils.setToast(getActivity(), JsonUtils.getFoodJson(group_list, kids_list));
-        Log.e("ssss",JsonUtils.getFoodJson(group_list,kids_list));
         AccessToken accessToken = new AccessToken(ShareUtils.getToken(getActivity()),ShareUtils.getKey(getActivity()));
         Upload(accessToken.accessToken(), JsonUtils.getFoodJson(group_list,kids_list),new MainApiManager.FialedInterface() {
             @Override

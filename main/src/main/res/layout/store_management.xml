@@ -6,6 +6,10 @@
     android:id="@+id/menu_framelayout"
     android:background="#F7F7F7"
     >
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -38,6 +42,7 @@
                     android:text="@string/shop_business"
                     />
                 <com.merchants.main.View.SwitchButton.UISwitchButton
+                    android:id="@+id/shop_business_switchbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -87,7 +92,7 @@
                     android:textColor="#747675"
                     android:layout_toLeftOf="@id/business_time_more"
                     android:layout_centerVertical="true"
-                    android:text="08:00-22:00"
+                    android:text="22:00"
                     />
 
             </RelativeLayout>
@@ -103,6 +108,7 @@
                 android:background="#EBEBEB"
                 />
             <RelativeLayout
+                android:id="@+id/shop_notices_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
@@ -140,6 +146,7 @@
                 android:background="#d6d6d6"
                 />
             <RelativeLayout
+                android:id="@+id/send_price_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
@@ -184,6 +191,7 @@
                 android:background="#EBEBEB"
                 />
             <RelativeLayout
+                android:id="@+id/send_food_price_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
@@ -228,6 +236,7 @@
                 android:background="#EBEBEB"
                 />
             <RelativeLayout
+                android:id="@+id/send_time_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
@@ -293,6 +302,7 @@
                     android:text="@string/message_business"
                     />
                 <com.merchants.main.View.SwitchButton.UISwitchButton
+                    android:id="@+id/message_business_switchbuton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -307,12 +317,14 @@
                 android:background="#EBEBEB"
                 />
             <RelativeLayout
+                android:id="@+id/store_phone_number_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="55dp"
                 android:clickable="true"
                 android:background="@drawable/background_style"
                 >
                 <TextView
+                    android:id="@+id/store_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="17sp"
@@ -355,6 +367,7 @@
                     android:text="@string/client_business"
                     />
                 <com.merchants.main.View.SwitchButton.UISwitchButton
+                    android:id="@+id/client_business_switchbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -400,4 +413,5 @@
                 />
         </LinearLayout>
     </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

@@ -18,7 +18,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/circle_background"
+    android:background="@drawable/alert_bg"
     android:id="@+id/time_picker_dialog"
     android:focusable="true" >
     <FrameLayout
@@ -45,6 +45,7 @@
         android:background="@color/line_background" />
     <LinearLayout
         style="?android:attr/buttonBarStyle"
+        android:background="@drawable/alertdialog_left_selector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
@@ -53,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/done_label"
+            android:text="@string/OK"
             android:textSize="@dimen/done_label_size"
             android:textColor="@color/done_text_color"
             style="?android:attr/buttonBarButtonStyle" />

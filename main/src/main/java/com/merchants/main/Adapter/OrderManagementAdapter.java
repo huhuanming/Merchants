@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.merchants.main.Model.OrderManagementData;
@@ -68,9 +69,17 @@ public class OrderManagementAdapter extends BaseAdapter {
                     .findViewById(R.id.order_management_item_number);
             holder.order_management_item_address = (TextView) convertView
                     .findViewById(R.id.order_management_item_address);
+
+            holder.order_management_item_food_arrivetime = (TextView) convertView
+                    .findViewById(R.id.order_management_item_food_arrivetime);
+
+            holder.order_management_finish_img = (ImageView) convertView
+                    .findViewById(R.id.order_management_finish_img);
             convertView.setTag(holder);
         } else {
+
             holder = (ViewHolder) convertView.getTag();
+            holder.order_management_finish_img.setVisibility(View.GONE);
         }
 
         holder.order_management_item_name.setText(list.get(position).shipping_user+"的订单");
@@ -78,7 +87,18 @@ public class OrderManagementAdapter extends BaseAdapter {
         holder.order_management_item_food_num.setText(list.get(position).food_count);
         holder.order_management_item_number.setText(list.get(position).phone_number);
         holder.order_management_item_address.setText(list.get(position).shipping_address);
+        if(list.get(position).is_now.equals("0"))
+        {
+            holder.order_management_item_food_arrivetime.setText("预约"+DateUtils.getTime(list.get(position).shipping_at)+"送达");
+        }
+        else {
+            holder.order_management_item_food_arrivetime.setText(R.string.time_to_send);
+        }
 
+        if(list.get(position).order_type.equals("1"))
+        {
+            holder.order_management_finish_img.setVisibility(View.VISIBLE);
+        }
         return convertView;
     }
 
@@ -88,5 +108,7 @@ public class OrderManagementAdapter extends BaseAdapter {
         TextView order_management_item_food_num;
         TextView order_management_item_number;
         TextView order_management_item_address;
+        TextView order_management_item_food_arrivetime;
+        ImageView order_management_finish_img;
     }
 }

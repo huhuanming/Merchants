@@ -1,5 +1,6 @@
 package com.merchants.main.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -7,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.merchants.main.Activity.OrderManagementDetails;
 import com.merchants.main.Adapter.OrderManagementAdapter;
 import com.merchants.main.ApiManager.MainApiManager;
 import com.merchants.main.ApiManager.MerchantsApiManager;
@@ -30,18 +33,16 @@ import rx.util.functions.Action1;
 public class OrderManagementFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
     private View parentView;
     private ListView listview;
-//    private SmoothProgressBar load_progressbar;
     private List<OrderManagementData> list = new ArrayList<OrderManagementData>();
     private OrderManagementAdapter adapter;
     private SwipeRefreshLayout swipeRefreshLayout;
-    private int page = 0;
     private boolean isrefresh = false;
+    private String order_id;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.order_management, container, false);
         getActivity().invalidateOptionsMenu();
         listview = (ListView)parentView.findViewById(R.id.order_management_listView);
-//        load_progressbar = (SmoothProgressBar)parentView.findViewById(R.id.load_progressbar);
         swipeRefreshLayout = (SwipeRefreshLayout) parentView.findViewById(R.id.swipe_container);
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setRefreshing(true);
@@ -51,14 +52,13 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
                 android.R.color.white, android.R.color.holo_blue_bright);
         adapter = new OrderManagementAdapter(getActivity(),list);
         listview.setAdapter(adapter);
-//        load_progressbar.setVisibility(View.VISIBLE);
         listview.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView absListView, int scrollState) {
                 //判断是否滚动到底部
                 if (absListView.getLastVisiblePosition() == absListView.getCount() - 1) {
-                    ToastUtils.setToast(getActivity(),"fff"+page);
-                    getData(page+"");
+                    order_id = list.get(list.size()-1).order_id+"";
+                    getData();
                 }
             }
 
@@ -67,20 +67,41 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
 
             }
         });
-        page = 0;
-        getData(page + "");
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), OrderManagementDetails.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("order_id",list.get(position).order_id);
+                bundle.putString("shipping_user",list.get(position).shipping_user);
+                bundle.putString("phone_number",list.get(position).phone_number);
+                bundle.putString("shipping_address",list.get(position).shipping_address);
+                bundle.putString("updated_at",list.get(position).updated_at);
+                bundle.putString("shipping_at",list.get(position).shipping_at);
+                bundle.putString("order_remark",list.get(position).order_remark);
+                bundle.putString("is_ticket",list.get(position).is_ticket);
+                bundle.putString("is_receipt",list.get(position).is_receipt);
+                bundle.putString("is_now",list.get(position).is_now);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        order_id = null;
+        getData();
         return parentView;
     }
 
 
 
-    private void getData(String pagestring)
+    private void getData()
     {
+
         AccessToken accessToken = new AccessToken(ShareUtils.getToken(getActivity()),ShareUtils.getKey(getActivity()));
-        getOrderData(ShareUtils.getId(getActivity()),accessToken.accessToken(),pagestring,new MainApiManager.FialedInterface() {
+        getOrderData(ShareUtils.getId(getActivity()),accessToken.accessToken(),order_id,new MainApiManager.FialedInterface() {
             @Override
             public void onSuccess(Object object) {
-                page++;
                 if(isrefresh)
                 {
 
@@ -88,7 +109,6 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
                     list.clear();
                 }
                 swipeRefreshLayout.setRefreshing(false);
-//                load_progressbar.setVisibility(View.GONE);
                 List<OrderManagementData> data_list = (List<OrderManagementData>)object;
                 list.addAll(data_list);
                 adapter.notifyDataSetChanged();
@@ -98,7 +118,6 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
             public void onFailth(int code) {
                 isrefresh = false;
                 swipeRefreshLayout.setRefreshing(false);
-//                load_progressbar.setVisibility(View.GONE);
                 switch (code)
                 {
                     case 401:
@@ -124,7 +143,6 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
             public void onOtherFaith() {
                 isrefresh = false;
                 swipeRefreshLayout.setRefreshing(false);
-//                load_progressbar.setVisibility(View.GONE);
                 ToastUtils.setToast(getActivity(),"发生错误");
             }
 
@@ -132,7 +150,6 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
             public void onNetworkError() {
                 isrefresh = false;
                 swipeRefreshLayout.setRefreshing(false);
-//                load_progressbar.setVisibility(View.GONE);
                 ToastUtils.setToast(getActivity(),"网络错误");
             }
         });
@@ -154,11 +171,6 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
                             retrofit.RetrofitError e = (retrofit.RetrofitError) throwable;
                             if(e.isNetworkError())
                             {
-//                                if (e.getCause() instanceof SocketTimeoutException) {
-//                                    fialedInterface.onFailth(e.getResponse().getStatus());
-//                                } else {
-//                                    fialedInterface.onNetworkError();
-//                                }
                                 fialedInterface.onNetworkError();
 
                             }
@@ -176,7 +188,7 @@ public class OrderManagementFragment extends Fragment implements SwipeRefreshLay
     @Override
     public void onRefresh() {
         isrefresh = true;
-        page = 0;
-        getData(page + "");
+        order_id = null;
+        getData();
     }
 }

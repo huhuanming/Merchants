@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F7F7F7"
+    >
+    <com.merchants.main.View.Button.BootstrapEditText
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColorHint="#ffdddddd"
+        android:textColor="#777777"
+        android:paddingLeft="3dp"
+        android:gravity="top"
+        bootstrapbutton:be_roundedCorners="true"
+        bootstrapbutton:be_state="default"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="20dp"
+        android:layout_height="3dp">
+        <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            />
+    </RelativeLayout>
+
+    <com.merchants.main.View.Button.BootstrapButton
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:clickable="true"
+        android:layout_margin="20dp"
+        android:text="@string/save"
+        bootstrapbutton:bb_text_gravity="center"
+        bootstrapbutton:bb_type="info" />
+</LinearLayout>
