@@ -24,39 +24,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad9ededc-e221-4372-973f-fc9af053c3b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/Constant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Listview/MyGridView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Adapter/OrderManagementDetailAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/OrderManagementKidData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/StoreManagementText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/StoreSettingData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/order_management_details_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/store_management_number.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/main/res/layout/store_management_text.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/MenuUploadBackData.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/UploadBackData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/AmPmCirclesView.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/AmPmCirclesView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/main/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/DateUtils.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/DateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/MenuManagementFragment.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/MenuManagementFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiInterface.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiManager.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/ApiManager/MerchantsApiManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/MerchantsMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Adapter/OrderManagementAdapter.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Adapter/OrderManagementAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/OrderManagementData.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Model/OrderManagementData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/OrderManagementDetails.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Activity/OrderManagementDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/OrderManagementFragment.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/OrderManagementFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/RadialSelectorView.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/RadialSelectorView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/ShareUtils.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Utils/ShareUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/StoreManagementFragment.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/Fragment/StoreManagementFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/TimePickerDialog.java" afterPath="$PROJECT_DIR$/main/src/main/java/com/merchants/main/View/Dialog/TimePickerDialog/TimePickerDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/main/src/main/res/values/color.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/order_management.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/order_management.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/order_management_details.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/order_management_details.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/order_management_item.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/order_management_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/store_management.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/store_management.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/main/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/time_header_label.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/time_header_label.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/main/res/layout/time_picker_dialog.xml" afterPath="$PROJECT_DIR$/main/src/main/res/layout/time_picker_dialog.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="d94f559a-7fe2-41a2-b111-4ebdffc2ee56" name="Failed commit: Default" comment="菜单界面功能全部实现" />
@@ -1837,7 +1804,11 @@
       <created>1411057145534</created>
       <updated>1411057145534</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="店铺管理页面所有功能">
+      <created>1411266716315</created>
+      <updated>1411266716315</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="5">
@@ -1877,7 +1848,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5091241" sideWeight="0.4994401" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6423358" sideWeight="0.4994401" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6423358" sideWeight="0.4994401" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1916,7 +1887,8 @@
     <MESSAGE value="菜单管理页面折叠效果最后一次修改" />
     <MESSAGE value="菜单界面功能全部实现" />
     <MESSAGE value="订单管理列表页面+骚气的下拉刷新" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单管理列表页面+骚气的下拉刷新" />
+    <MESSAGE value="店铺管理页面所有功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="店铺管理页面所有功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2018,6 +1990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.214286" vertical-offset="0" max-vertical-offset="6768">
           <caret line="176" column="27" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2219,6 +2192,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5714285" vertical-offset="2106" max-vertical-offset="5742">
           <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2242,6 +2216,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.071428575" vertical-offset="2502" max-vertical-offset="3006">
           <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
