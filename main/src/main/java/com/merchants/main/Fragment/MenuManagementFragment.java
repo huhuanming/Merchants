@@ -316,7 +316,7 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
                 }, new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
-                        if(throwable.getClass().getName().toString().indexOf("RetrofitError") != -1) {
+                        if(throwable != null && throwable.getClass().getName().toString().indexOf("RetrofitError") != -1) {
                             retrofit.RetrofitError e = (retrofit.RetrofitError) throwable;
                             if(e.isNetworkError())
                             {
@@ -350,7 +350,7 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
                     @Override
                     public void call(Throwable throwable) {
 
-                        if(throwable.getClass().getName().toString().indexOf("RetrofitError") != -1) {
+                        if(throwable != null && throwable.getClass().getName().toString().indexOf("RetrofitError") != -1) {
                             retrofit.RetrofitError e = (retrofit.RetrofitError) throwable;
                             if(e.isNetworkError())
                             {
