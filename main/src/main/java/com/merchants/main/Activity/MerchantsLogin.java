@@ -13,6 +13,7 @@ import com.merchants.main.ApiManager.MainApiManager;
 import com.merchants.main.ApiManager.MerchantsApiManager;
 import com.merchants.main.Model.LoginBackData;
 import com.merchants.main.R;
+import com.merchants.main.Utils.EncodeUtils;
 import com.merchants.main.Utils.ShareUtils;
 import com.merchants.main.Utils.ToastUtils;
 import com.merchants.main.View.Button.BootstrapButton;
@@ -56,10 +57,10 @@ public class MerchantsLogin extends Activity {
 //            ToastUtils.setToast(PromotionerLogin.this,"请输入正确的电话号码!");
 //        }
         else {
-            Login(username,password,new MainApiManager.FialedInterface() {
+            Login(username, EncodeUtils.MD5(EncodeUtils.MD5(password)), new MainApiManager.FialedInterface() {
                 @Override
                 public void onSuccess(Object object) {
-                    LoginBackData loginBackData = (LoginBackData)object;
+                    LoginBackData loginBackData = (LoginBackData) object;
                     mshared = getSharedPreferences("usermessage", 0);
                     editor = mshared.edit();
                     editor.putString("token", loginBackData.access_token.token);
@@ -68,39 +69,40 @@ public class MerchantsLogin extends Activity {
                     editor.commit();
                     progressBar.setVisibility(View.GONE);
                     Intent intent = new Intent();
-                    intent.setClass(MerchantsLogin.this,MerchantsMenu.class);
+                    intent.setClass(MerchantsLogin.this, MerchantsMenu.class);
                     startActivity(intent);
                     MerchantsLogin.this.finish();
                 }
+
                 @Override
                 public void onOtherFaith() {
-                    ToastUtils.setToast(MerchantsLogin.this,"发生错误");
+                    ToastUtils.setToast(MerchantsLogin.this, "发生错误");
                     progressBar.setVisibility(View.GONE);
                 }
 
                 @Override
                 public void onNetworkError() {
-                    ToastUtils.setToast(MerchantsLogin.this,"网络错误");
+                    ToastUtils.setToast(MerchantsLogin.this, "网络错误");
                     progressBar.setVisibility(View.GONE);
                 }
+
                 @Override
                 public void onFailth(int code) {
                     progressBar.setVisibility(View.GONE);
-                    switch (code)
-                    {
+                    switch (code) {
                         case 401:
-                            ToastUtils.setToast(MerchantsLogin.this,"电话号码或者密码有误");
+                            ToastUtils.setToast(MerchantsLogin.this, "电话号码或者密码有误");
                             ShareUtils.deleteTokenKey(MerchantsLogin.this);
                             break;
                         case 404:
-                            ToastUtils.setToast(MerchantsLogin.this,"信息已经过期，请重新登录!");
+                            ToastUtils.setToast(MerchantsLogin.this, "信息已经过期，请重新登录!");
                             ShareUtils.deleteTokenKey(MerchantsLogin.this);
                             break;
                         case 501:
-                            ToastUtils.setToast(MerchantsLogin.this,"上传出错，请再重新上传一次!");
+                            ToastUtils.setToast(MerchantsLogin.this, "上传出错，请再重新上传一次!");
                             break;
                         default:
-                            ToastUtils.setToast(MerchantsLogin.this,"网络错误，请再重新上传一次!");
+                            ToastUtils.setToast(MerchantsLogin.this, "网络错误，请再重新上传一次!");
                             break;
                     }
                 }

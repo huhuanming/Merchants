@@ -10,6 +10,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.BounceInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.AdapterView;
 import android.widget.RelativeLayout;
@@ -132,7 +133,7 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
                 deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
                         0x3F, 0x25)));
                 // set item width
-                deleteItem.setWidth(dp2px(90));
+                deleteItem.setWidth(120);
                 // set a icon
                 deleteItem.setIcon(R.drawable.ic_delete);
                 // add to menu
@@ -147,7 +148,6 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
             @Override
             public void onMenuItemClick(int position, SwipeMenu menu, int index) {
                 new Delete().from(MenuManagementKidsDatabase.class).where("MenuManagementGroupDatabase = ?",group_list.get(position).getId()).execute();
-
                 MenuManagementGroupDatabase database = MenuManagementGroupDatabase.load(MenuManagementGroupDatabase.class,group_list.get(position).getId());
                 database.delete();
                 group_list.remove(position);
@@ -155,6 +155,10 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
                 adapter.notifyDataSetChanged();
             }
         });
+
+        //添加进出动画
+        listview.setCloseInterpolator(new BounceInterpolator());
+        listview.setOpenInterpolator(new BounceInterpolator());
 
         init();
         return parentView;
@@ -386,7 +390,6 @@ public class MenuManagementFragment extends Fragment implements MerchantsMenu.Me
         swipeRefreshLayout.setRefreshing(true);
 //        progressbar.setVisibility(View.VISIBLE);
         getDataFromDatabase();
-        ToastUtils.setToast(getActivity(), JsonUtils.getFoodJson(group_list, kids_list));
         AccessToken accessToken = new AccessToken(ShareUtils.getToken(getActivity()),ShareUtils.getKey(getActivity()));
         Upload(accessToken.accessToken(), JsonUtils.getFoodJson(group_list,kids_list),new MainApiManager.FialedInterface() {
             @Override
